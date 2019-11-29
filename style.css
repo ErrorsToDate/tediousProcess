@@ -1,0 +1,122 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+body {
+  margin: 0 auto;
+  padding: 4em 1em;
+  max-width: 50em;
+  line-height: 1.5;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  color: #555;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header #profile {
+  height: 9em;
+  width: 9em;
+  border-radius: 50%;
+  transition: box-shadow 0.2s linear;
+}
+
+#header #profile:hover {
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+#header #title h1, #header #title h2{
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  color: #333333;
+}
+
+h2 {
+  padding-top: 1em;
+  margin-top: 1em;
+}
+
+h3 {
+  margin-bottom: 0.5em;
+}
+
+.flex-vertical-center {
+  display: flex;
+  align-items: center;
+}
+
+code,
+pre {
+  background: #EEEEEE;
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 3px;
+}
+
+code::before,
+code::after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+h2 {
+  border-top: solid 1px #EEEEEE;
+}
+
+#refresh-link {
+  height: 1em;
+  vertical-align: middle;
+}
+
+.ion-icon {
+  font-size: 1.5em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  color: #333333;
+}
+
+:target {
+  animation: 1.5s fadeOut ease-out;
+}
+
+@keyframes fadeOut {
+  from {
+    background: blanchedalmond;
+  }
+
+  to {
+    background: none;
+  }
+}
+
+.info, .title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.only-print {
+  display: none;
+}
+
+@media print
+{    
+  .no-print, .no-print *
+  {
+    display: none;
+  }
+
+  .only-print, .only-print * {
+    display: block;
+  }
+}
